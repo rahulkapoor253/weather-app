@@ -1,25 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Titles from './components/Titles';
+import Form from './components/Form';
+
+const API_KEY = "d9123fc30ca7f98eb21355a2059b76c7";
+
+const URL = "https://api.openweathermap.org/data/2.5/weather?q=Chandigarh,india&appid=d9123fc30ca7f98eb21355a2059b76c7&units=metric";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <Titles />
+        <Form />
       </div>
     );
   }
